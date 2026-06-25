@@ -74,3 +74,22 @@ resource "container" "wrong-exposed-port" {
     group = "root"
   }
 }
+
+resource "container" "wrong-entrypoint" {
+  network {
+    id = resource.network.network.meta.id
+  }
+  image {
+    name = "nginx:latest"
+  }
+  entrypoint = ["/bin/invalid"]
+  privileged = false
+  resources {
+    cpu    = 1000
+    memory = 256
+  }
+  run_as {
+    user  = "root"
+    group = "root"
+  }
+}
