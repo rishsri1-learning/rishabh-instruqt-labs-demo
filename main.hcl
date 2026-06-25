@@ -1,6 +1,6 @@
 resource "lab" "main" {
   title       = "Skeleton Lab"
-  description = "This is the Skeleton Lab.\nYou can use this as a minimal starting point for developing labs.\n\nFor more information, check ./assets/README.md"
+  description = "This is the Skeleton Lab.\nYou can use this as a minimal starting point for developing labs.\n\n"
 
   layout = resource.layout.single_panel
   content {
@@ -10,6 +10,15 @@ resource "lab" "main" {
         title     = "Introduction Lab Details"
         reference = resource.page.introduction-lab-details
       }
+      page "migration-page-2" {
+        title     = "Migration Page 2"
+        reference = resource.page.migration-page-2
+      }
+    }
+  }
+  settings {
+    timelimit {
+      duration = "2h"
     }
   }
 }
