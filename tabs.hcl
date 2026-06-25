@@ -8,12 +8,15 @@ resource "terminal" "terminal" {
   shell  = "bash"
 }
 
-resource "service" "server-incorrect-example" {
-  target = resource.container.incorrect-web-scenarios-1
-  port   = 9999
-}
 
-resource "terminal" "terminal-incorrect" {
+
+
+resource "terminal" "wrong-port-configured-terminal-nginx" {
   target = resource.container.incorrect-web-scenarios-1
   shell  = "bash"
+}
+
+resource "service" "wrong-port-configured-server-nginx" {
+  target = resource.container.incorrect-web-scenarios-1
+  port   = 9999
 }

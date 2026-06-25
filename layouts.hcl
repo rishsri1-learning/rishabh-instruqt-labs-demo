@@ -14,11 +14,11 @@ resource "layout" "single_panel" {
     }
     tab "terminal-incorrect" {
       title  = "terminal-incorrect"
-      target = resource.terminal.terminal-incorrect
+      target = resource.terminal.wrong-port-configured-terminal-nginx
     }
     tab "server-incorrect-example" {
       title  = "server-incorrect-example"
-      target = resource.service.server-incorrect-example
+      target = resource.service.wrong-port-configured-server-nginx
     }
     instructions {
       title = "Instructions"
