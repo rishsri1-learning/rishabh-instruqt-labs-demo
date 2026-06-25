@@ -38,12 +38,3 @@ resource "layout" "single_panel" {
 }
 
 
-resource "layout" "wrong-port-exposed" {
-  column {
-    width = "100"
-    tab "terminal" {
-      title  = "terminal"
-      target = resource.terminal.terminal
-    }
-  }
-}
