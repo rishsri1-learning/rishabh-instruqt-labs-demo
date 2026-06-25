@@ -1,5 +1,6 @@
 
 
+
 resource "layout" "single_panel" {
   column {
     width = "100"
@@ -18,6 +19,9 @@ resource "layout" "single_panel" {
     tab "server-incorrect-example" {
       title  = "server-incorrect-example"
       target = resource.service.server-incorrect-example
+    }
+    instructions {
+      title = "Instructions"
     }
   }
 }
