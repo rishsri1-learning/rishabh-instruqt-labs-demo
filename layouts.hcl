@@ -1,6 +1,25 @@
 
 
 
+
+
+resource "layout" "second_panel" {
+  column {
+    width = "100"
+    tab "wrong-port-configured-server-nginx" {
+      title  = "wrong-port-configured-server-nginx"
+      target = resource.service.wrong-port-configured-server-nginx
+    }
+    tab "wrong-port-configured-terminal-nginx" {
+      title  = "wrong-port-configured-terminal-nginx"
+      target = resource.terminal.wrong-port-configured-terminal-nginx
+    }
+    instructions {
+      title = "Instructions"
+    }
+  }
+}
+
 resource "layout" "single_panel" {
   column {
     width = "100"
@@ -11,14 +30,6 @@ resource "layout" "single_panel" {
     tab "terminal" {
       title  = "terminal"
       target = resource.terminal.terminal
-    }
-    tab "terminal-incorrect" {
-      title  = "terminal-incorrect"
-      target = resource.terminal.wrong-port-configured-terminal-nginx
-    }
-    tab "server-incorrect-example" {
-      title  = "server-incorrect-example"
-      target = resource.service.wrong-port-configured-server-nginx
     }
     instructions {
       title = "Instructions"
