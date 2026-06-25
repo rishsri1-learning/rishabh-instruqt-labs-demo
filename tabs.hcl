@@ -21,7 +21,3 @@ resource "service" "wrong-port-configured-server-nginx" {
   port   = 9999
 }
 
-resource "terminal" "wrong-entrypoin-terminal" {
-  target = resource.container.wrong-entrypoint
-  shell  = "bash"
-}
