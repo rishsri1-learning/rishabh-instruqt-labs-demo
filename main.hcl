@@ -14,11 +14,6 @@ resource "lab" "main" {
         title     = "Wrong Port Failure Scenario Tested"
         reference = resource.page.wrong-port-failure-scenario-tested
       }
-      page "wrong-entry-point" {
-        title     = "Wrong Entry Point"
-        reference = resource.page.wrong-entry-point
-        layout    = resource.layout.wrongentrypoint
-      }
     }
   }
   settings {

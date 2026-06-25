@@ -14,7 +14,3 @@ resource "page" "wrong-port-failure-scenario-tested" {
 }
 
 
-resource "page" "wrong-entry-point" {
-  title = "Wrong Entry Point"
-  file  = "instructions/__default/wrong-entry-point.md"
-}

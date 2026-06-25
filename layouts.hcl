@@ -41,8 +41,3 @@ resource "layout" "single_panel" {
 
 
 
-resource "layout" "wrongentrypoint" {
-  column {
-    width = "100"
-  }
-}
