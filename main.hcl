@@ -9,10 +9,12 @@ resource "lab" "main" {
       page "introduction-lab-details" {
         title     = "Introduction Lab Details"
         reference = resource.page.introduction-lab-details
+        layout    = resource.layout.single_panel
       }
       page "migration-page-2" {
         title     = "Migration Page 2"
         reference = resource.page.migration-page-2
+        layout    = resource.layout.second_panel
       }
     }
   }
