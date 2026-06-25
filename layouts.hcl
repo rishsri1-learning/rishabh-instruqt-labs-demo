@@ -38,3 +38,14 @@ resource "layout" "single_panel" {
 }
 
 
+
+
+resource "layout" "wrongentrypoint" {
+  column {
+    width = "100"
+    tab "wrong-entrypoin-terminal" {
+      title  = "wrong-entrypoin-terminal"
+      target = resource.terminal.wrong-entrypoin-terminal
+    }
+  }
+}
