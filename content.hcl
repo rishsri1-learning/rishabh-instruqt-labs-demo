@@ -1,4 +1,11 @@
-resource "page" "untitled-page-1" {
-  title = "Untitled page 1"
-  file  = "instructions/__default/untitled-page-1.md"
+
+resource "page" "introduction" {
+  title = "Introduction"
+  file  = "instructions/__default/introduction.md"
+}
+
+
+resource "page" "validation-concepts" {
+  title = "Validation Concepts"
+  file  = "instructions/__default/validation-concepts.md"
 }
