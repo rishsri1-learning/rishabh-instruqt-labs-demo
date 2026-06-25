@@ -6,13 +6,9 @@ resource "lab" "main" {
   content {
     chapter "__default" {
       title = "Default"
-      page "introduction" {
-        title     = "Introduction"
-        reference = resource.page.introduction
-      }
-      page "validation-concepts" {
-        title     = "Validation Concepts"
-        reference = resource.page.validation-concepts
+      page "introduction-lab-details" {
+        title     = "Introduction Lab Details"
+        reference = resource.page.introduction-lab-details
       }
     }
   }
