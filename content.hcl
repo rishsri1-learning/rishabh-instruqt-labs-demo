@@ -7,7 +7,8 @@ resource "page" "introduction-lab-details" {
   file  = "instructions/__default/introduction-lab-details.md"
 }
 
-resource "page" "migration-page-2" {
-  title = "Migration Page 2"
-  file  = "instructions/__default/migration-page-2.md"
+
+resource "page" "wrong-port-failure-scenario-tested" {
+  title = "Wrong Port Failure Scenario Tested"
+  file  = "instructions/__default/wrong-port-failure-scenario-tested.md"
 }
