@@ -52,3 +52,25 @@ resource "container" "incorrect-web-scenarios-1" {
     group = "root"
   }
 }
+
+resource "container" "wrong-exposed-port" {
+  network {
+    id = resource.network.network.meta.id
+  }
+  image {
+    name = "nginx:latest"
+  }
+  port {
+    local    = "8081"
+    protocol = "tcp"
+  }
+  privileged = false
+  resources {
+    cpu    = 1000
+    memory = 256
+  }
+  run_as {
+    user  = "root"
+    group = "root"
+  }
+}
