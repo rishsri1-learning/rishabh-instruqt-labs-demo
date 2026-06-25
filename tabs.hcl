@@ -20,3 +20,8 @@ resource "service" "wrong-port-configured-server-nginx" {
   target = resource.container.incorrect-web-scenarios-1
   port   = 9999
 }
+
+resource "terminal" "wrong-entrypoin-terminal" {
+  target = resource.container.wrong-entrypoint
+  shell  = "bash"
+}
